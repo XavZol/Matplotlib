@@ -1,6 +1,14 @@
-  etiquetas  cantidad
-0  Manzanas        30
-1   Bananas        35
-2  Naranjas        26
-3      Uvas        33
-['Solarize_Light2', '_classic_test_patch', '_mpl-gallery', '_mpl-gallery-nogrid', 'bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'petroff10', 'seaborn-v0_8', 'seaborn-v0_8-bright', 'seaborn-v0_8-colorblind', 'seaborn-v0_8-dark', 'seaborn-v0_8-dark-palette', 'seaborn-v0_8-darkgrid', 'seaborn-v0_8-deep', 'seaborn-v0_8-muted', 'seaborn-v0_8-notebook', 'seaborn-v0_8-paper', 'seaborn-v0_8-pastel', 'seaborn-v0_8-poster', 'seaborn-v0_8-talk', 'seaborn-v0_8-ticks', 'seaborn-v0_8-white', 'seaborn-v0_8-whitegrid', 'tableau-colorblind10']
+       Latitud  Longitud  Luminosidad
+0     1.764052 -0.202117    49.929240
+1     0.400157 -0.833231    98.656690
+2     0.978738  1.733600    68.735218
+3     2.240893  0.190649    85.794230
+4     1.867558 -0.177810    50.499409
+...        ...       ...          ...
+9995 -1.809282  0.271662    65.661394
+9996  0.042359 -0.108997    42.123643
+9997  0.516872 -0.057259    18.950191
+9998 -0.032921 -1.058931     8.672976
+9999  1.298111 -0.326528    14.826581
+
+[10000 rows x 3 columns]

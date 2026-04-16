@@ -1,37 +1,17 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
-df = pd.DataFrame({
-    "etiquetas":['Manzanas', 'Bananas', 'Naranjas', 'Uvas'],
-    "cantidad":[30,35, 26,33]
-})
-
+df = pd.read_csv(r"C:\Users\javie\OneDrive\Desktop\Excel_DB\Iluminacion.csv")
 print(df)
 
-fig, axs = plt.subplots(ncols=2, nrows=1)
-axs1 = axs[0]
-axs2 = axs[1]
-axs1.plot(df['etiquetas'], df['cantidad'])
-axs2.pie(df['cantidad'])
-plt.show()
+# help(plt.hexbin)
 
-plt.style.use('ggplot')
-
-fig, axs = plt.subplots(ncols=2, nrows=1)
-axs1 = axs[0]
-axs2 = axs[1]
-axs1.plot(df['etiquetas'], df['cantidad'])
-axs2.pie(df['cantidad'])
-plt.show()
-
-print(plt.style.available)
-
-plt.style.use('seaborn-v0_8-pastel')
-
-fig, axs = plt.subplots(ncols=2, nrows=1)
-axs1 = axs[0]
-axs2 = axs[1]
-axs1.plot(df['etiquetas'], df['cantidad'])
-axs2.pie(df['cantidad'])
+fig, axs = plt.subplots()
+hb = axs.hexbin(df['Latitud'], df['Longitud'], C=df['Luminosidad'], gridsize=50, cmap='Blues')
+axs.set_facecolor('#D2F2FF')
+plt.colorbar(hb, label="nivel de sombras")
+plt.xlabel("Latitud")
+plt.ylabel("Longitud")
+plt.title("Luminosidad en Valle")
+axs.set(xlim=(-4, 4), ylim=(-5,5))
 plt.show()
