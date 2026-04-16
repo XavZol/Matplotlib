@@ -1,24 +1,38 @@
+import pandas as pd
 import matplotlib.pyplot as plt
-# %matplotlib inline # no necesitamos en show en otras versiones
 
-numeros = [4, 2, 7, 9, 8]
-# plt.plot(numeros) 
+# plt.style.use('ggplot')
 
-para guardar el gráfico   
-plt.savefig(r"C:\Users\javie\OneDrive\Desktop\Excel_DB\mi_grafico.png");
+fig = plt.figure
+ax = plt.axes()
 
-plt.figure(facecolor="orange")
-plt.plot(numeros)
+print(ax)
 
-plt.subplots(ncols=2, nrows=2)
+x = [1, 2, 3, 5, 6, 8, 9, 7]
+y = [1, 6, 3, 4, 8, 7, 6, 7]
+plt.plot(x, y, "b*:")
+plt.grid()
 plt.show()
 
-fig, axs = plt.subplots(ncols=2, nrows=2)
-print(type(fig), type(axs), axs[0])
+# help(plt.axis)
 
-print(axs[0][0]) # para poder llegar al primer recuadro
+x = [1, 2, 3, 5, 6, 8, 9, 7]
+y = [1, 6, 3, 4, 8, 7, 6, 7]
+plt.plot(x, y, "ro-")
+plt.axis([0, 10, 0, 10])
+plt.grid()
+plt.show()
 
-print(type(axs[0][0]))
 
-axes1 = axs[0][0]
-print(axes1.yaxis)
+ruta = r"C:\Users\javie\OneDrive\Desktop\Excel_DB\Lluvias_region_A.csv"
+df = pd.read_csv(ruta)
+print(df)
+
+plt.plot(df['region'],df['enero'])
+plt.grid()
+plt.show()
+
+plt.plot(df['region'],df['enero']) # Rotación en 45 grados para mejor presentación
+plt.xticks(rotation=45)
+plt.grid()
+plt.show()

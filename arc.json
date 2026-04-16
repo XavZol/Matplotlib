@@ -1,4 +1,11 @@
-<class 'matplotlib.figure.Figure'> <class 'numpy.ndarray'> [<Axes: > <Axes: >]
-Axes(0.125,0.53;0.352273x0.35)
-<class 'matplotlib.axes._axes.Axes'>
-YAxis(80.0,254.4)
+Axes(0.125,0.11;0.775x0.77)
+     region  enero  febrero  marzo  ...  octubre  noviembre  diciembre   anual
+0  A CORUNA  240.5    293.4   31.0  ...    154.5      100.8      214.8  1536.9
+1  ALBACETE   68.1     28.0   26.2  ...     44.8       33.1       14.1   439.5
+2  ALICANTE   49.2      3.7   63.2  ...     41.1       47.4        1.8   427.6
+3   ALMERIA   56.3      5.2   35.8  ...     27.3       32.6        3.2   288.7
+4     ARABA   96.8     79.9   38.0  ...     38.5      212.2      197.3   949.7
+5  ASTURIAS  196.9    138.4   34.4  ...     74.2      309.8      205.3  1362.7
+6     AVILA   67.6    104.5    5.6  ...     91.7       33.9       47.5   621.9
+
+[7 rows x 14 columns]
