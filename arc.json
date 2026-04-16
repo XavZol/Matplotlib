@@ -1,14 +1,24 @@
-       Latitud  Longitud  Luminosidad
-0     1.764052 -0.202117    49.929240
-1     0.400157 -0.833231    98.656690
-2     0.978738  1.733600    68.735218
-3     2.240893  0.190649    85.794230
-4     1.867558 -0.177810    50.499409
-...        ...       ...          ...
-9995 -1.809282  0.271662    65.661394
-9996  0.042359 -0.108997    42.123643
-9997  0.516872 -0.057259    18.950191
-9998 -0.032921 -1.058931     8.672976
-9999  1.298111 -0.326528    14.826581
+      Fecha        Ciudad  ...  Velocidad del Viento  Humedad Relativa
+0  1/1/2023  Buenos Aires  ...                  22.7              68.8
+1  1/1/2023       Cordoba  ...                  33.8              61.7
+2  1/1/2023       Rosario  ...                  10.6              80.0
+3  1/1/2023       Mendoza  ...                  23.8              76.8
+4  1/1/2023       Tucuman  ...                  25.7              54.9
 
-[10000 rows x 3 columns]
+[5 rows x 7 columns]
+       Fecha        Ciudad  ...  Velocidad del Viento  Humedad Relativa
+0 2023-01-01  Buenos Aires  ...                  22.7              68.8
+1 2023-01-01       Cordoba  ...                  33.8              61.7
+2 2023-01-01       Rosario  ...                  10.6              80.0
+3 2023-01-01       Mendoza  ...                  23.8              76.8
+4 2023-01-01       Tucuman  ...                  25.7              54.9
+
+[5 rows x 7 columns]
+['Buenos Aires']
+['Buenos Aires', 'Cordoba']
+['Buenos Aires', 'Cordoba', 'Rosario']
+['Buenos Aires', 'Cordoba', 'Rosario', 'Mendoza']
+['Buenos Aires', 'Cordoba', 'Rosario', 'Mendoza', 'Tucuman']
+
+Ciudades disponibles:  ['Buenos Aires', 'Cordoba', 'Rosario', 'Mendoza', 'Tucuman']
+Elija la ciudad de la lista: Elija un mes (por ej. Enero = 1): 
