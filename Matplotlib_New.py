@@ -1,38 +1,30 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
-# plt.style.use('ggplot')
-
-fig = plt.figure
-ax = plt.axes()
-
-print(ax)
-
-x = [1, 2, 3, 5, 6, 8, 9, 7]
-y = [1, 6, 3, 4, 8, 7, 6, 7]
-plt.plot(x, y, "b*:")
-plt.grid()
-plt.show()
-
-# help(plt.axis)
-
-x = [1, 2, 3, 5, 6, 8, 9, 7]
-y = [1, 6, 3, 4, 8, 7, 6, 7]
-plt.plot(x, y, "ro-")
-plt.axis([0, 10, 0, 10])
-plt.grid()
-plt.show()
-
-
-ruta = r"C:\Users\javie\OneDrive\Desktop\Excel_DB\Lluvias_region_A.csv"
-df = pd.read_csv(ruta)
+df = pd.read_csv(r"C:\Users\javie\OneDrive\Desktop\Excel_DB\Ventas.csv")
 print(df)
 
-plt.plot(df['region'],df['enero'])
-plt.grid()
+plt.hist(df['Producto'])
 plt.show()
 
-plt.plot(df['region'],df['enero']) # Rotación en 45 grados para mejor presentación
-plt.xticks(rotation=45)
-plt.grid()
+numeros = np.random.randn(1000)
+print(numeros)
+
+plt.hist(numeros)
 plt.show()
+
+plt.hist(numeros, bins=40, alpha=0.5, color='red')
+plt.show();
+
+plt.hist(numeros, bins=40, alpha=0.5, color='red', edgecolor='green', histtype='step')
+plt.show();
+
+
+x1 = np.random.randn(1000)
+x2 = np.random.randn(500)
+x3 = np.random.randn(100)
+plt.hist(x1, histtype='stepfilled', alpha=0.3, bins=40)
+plt.hist(x2, histtype='stepfilled', alpha=0.3, bins=40)
+plt.hist(x3, histtype='stepfilled', alpha=0.3, bins=40)
+plt.show();
