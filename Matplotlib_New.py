@@ -1,37 +1,26 @@
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 
-x = np.linspace( 0, 10, 30)
-y = np.sin(x)
+df = pd.DataFrame({
+    "etiquetas": ['Manzanas', 'Bananas', 'Naranjas', 'Uvas'],
+    "cantidad":[30, 60, 80, 20]
+})
+print(df)
 
-plt.plot(x, y, 'o') # Gráfico Scatter
-plt.show();
-
-aleatorio = np.random.RandomState(0)
-marcadores = ['o', 'x', '+', 'v', 's', 'd']
-for marcador in marcadores: 
-    plt.plot(aleatorio.rand(5), aleatorio.rand(5), marcador)
-    plt.show()
-    
-plt.plot(x,y , ':ob')
+plt.pie(df['cantidad']);
 plt.show()
 
-plt.plot(x, y, '-p')
+plt.pie(df['cantidad'], 
+        labels=df['etiquetas'],
+        autopct='%1.1f%%',
+        colors=['#87CEEB', '#6495ED', '#000080', '#40E0D0'])
 plt.show()
 
-plt.plot(x, y, '-p' ,color='red', markersize=15, linewidth=2, markerfacecolor='white')
-plt.show()
-
-plt.scatter(x, y)
-plt.show()
-
-aleatorio1 = np.random.RandomState(0)
-plt.scatter(aleatorio1.randn(100),
-            aleatorio1.randn(100),
-            c=aleatorio1.randn(100),
-            s=aleatorio1.randn(100) * 1000,
-            alpha=0.3,
-            cmap='viridis')
-plt.colorbar()
+plt.pie(df['cantidad'], 
+        labels=df['etiquetas'],
+        autopct='%1.1f%%',
+        colors=['#87CEEB', '#6495ED', '#000080', '#40E0D0'],
+        shadow=True,
+        explode=(0,0,0, 0.5))
+plt.title("Mis Frutas") 
 plt.show()
